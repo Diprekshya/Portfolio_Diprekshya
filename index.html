@@ -39,7 +39,6 @@
             overflow-x: hidden;
         }
 
-        /* Grain overlay */
         body::after {
             content: '';
             position: fixed;
@@ -72,9 +71,7 @@
             -webkit-backdrop-filter: blur(14px);
             border-bottom: 1px solid var(--border);
         }
-        section {
-            scroll-margin-top: calc(var(--nav-h) + 1rem);
-        }
+        section { scroll-margin-top: calc(var(--nav-h) + 1rem); }
         .nav-logo {
             font-family: var(--font-serif);
             font-size: 1.35rem;
@@ -131,7 +128,6 @@
             position: relative;
             overflow: hidden;
         }
-        /* large decorative rings */
         .hero-ring {
             position: absolute;
             border-radius: 50%;
@@ -159,7 +155,6 @@
             color: var(--gold);
             font-weight: 400;
         }
-
         h1.hero-name {
             font-family: var(--font-serif);
             font-size: clamp(3.8rem, 9.5vw, 9rem);
@@ -172,7 +167,6 @@
             animation: fadeUp 0.9s ease 0.25s forwards;
         }
         h1.hero-name em { font-style: italic; color: var(--gold); }
-
         .hero-tagline {
             font-size: clamp(0.9rem, 1.4vw, 1.05rem);
             color: var(--text-muted);
@@ -182,7 +176,6 @@
             transform: translateY(18px);
             animation: fadeUp 0.8s ease 0.4s forwards;
         }
-
         .hero-roles {
             display: flex;
             flex-wrap: wrap;
@@ -204,7 +197,6 @@
             transition: all 0.25s;
         }
         .role-pill:hover { border-color: var(--gold); color: var(--gold); }
-
         .hero-ctas {
             display: flex;
             gap: 1rem;
@@ -239,7 +231,6 @@
             transition: all 0.25s;
         }
         .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
-
         .hero-stats {
             margin-top: 5rem;
             padding-top: 2.5rem;
@@ -267,22 +258,13 @@
         }
 
         /* ─── LAYOUT HELPERS ─── */
-        .section-wrap {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 7rem 5vw;
-        }
+        .section-wrap { max-width: 1180px; margin: 0 auto; padding: 7rem 5vw; }
         .section-divider {
             width: 100%;
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--border), transparent);
         }
-        .section-eyebrow {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.85rem;
-        }
+        .section-eyebrow { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.85rem; }
         .section-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); }
         .section-eyebrow-text {
             font-size: 0.68rem;
@@ -302,43 +284,19 @@
         h2.section-title em { font-style: italic; color: var(--gold); }
 
         /* ─── ABOUT ─── */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 5rem;
-            align-items: start;
-        }
-        .about-text p {
-            color: var(--text-muted);
-            font-size: 0.98rem;
-            line-height: 1.9;
-            margin-bottom: 1.2rem;
-        }
+        .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 5rem; align-items: start; }
+        .about-text p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.9; margin-bottom: 1.2rem; }
         .about-text p strong { color: var(--text); font-weight: 500; }
-
         .about-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
-        .sidebar-item {
-            border-left: 1px solid var(--border);
-            padding-left: 1.4rem;
-        }
-        .sidebar-label {
-            font-size: 0.65rem;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--text-dim);
-            margin-bottom: 0.3rem;
-        }
+        .sidebar-item { border-left: 1px solid var(--border); padding-left: 1.4rem; }
+        .sidebar-label { font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.3rem; }
         .sidebar-value { font-size: 0.9rem; color: var(--text); font-weight: 400; line-height: 1.6; }
         .sidebar-value a { color: var(--gold); text-decoration: none; transition: opacity 0.2s; }
         .sidebar-value a:hover { opacity: 0.7; }
 
         /* ─── SKILLS ─── */
         #skills { background: var(--surface); }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.25rem;
-        }
+        .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
         .skill-card {
             border: 1px solid var(--border);
             padding: 1.75rem;
@@ -347,14 +305,13 @@
             transition: all 0.3s;
         }
         .skill-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
-        .skill-icon { 
-            font-size: 1.3rem; 
+        .skill-icon {
+            font-size: 1.3rem;
             margin-bottom: 0.85rem;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
+            width: 32px; height: 32px;
             background: var(--gold);
             color: var(--bg);
             border-radius: 50%;
@@ -364,19 +321,16 @@
         .skill-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.65; }
 
         /* ─── PROJECTS ─── */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.4rem;
-        }
+        .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
         .project-card {
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 2rem;
-            background: #ede9e0 !important;
+            background: #ede9e0;
             transition: all 0.35s;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
         .project-card::before {
             content: '';
@@ -387,17 +341,15 @@
             opacity: 0;
             transition: opacity 0.35s;
         }
-        .project-card:hover { border-color: var(--border-hover); transform: translateY(-5px); background: var(--surface-2); }
+        .project-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(107,62,116,0.1);
+        }
         .project-card:hover::before { opacity: 1; }
 
         .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.6rem; }
-        .card-company {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--text);
-            line-height: 1.1;
-        }
+        .card-company { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; color: var(--text); line-height: 1.1; }
         .tag {
             font-size: 0.62rem;
             letter-spacing: 0.12em;
@@ -408,18 +360,13 @@
             white-space: nowrap;
             flex-shrink: 0;
         }
-        .tag-gold { background: rgba(196,169,106,0.1); color: var(--gold); border: 1px solid rgba(196,169,106,0.22); }
-        .tag-coral { background: rgba(204,90,70,0.1); color: var(--coral); border: 1px solid rgba(204,90,70,0.22); }
-        .tag-teal { background: rgba(106,191,184,0.1); color: var(--teal); border: 1px solid rgba(106,191,184,0.22); }
+        .tag-gold   { background: rgba(196,169,106,0.1); color: var(--gold);  border: 1px solid rgba(196,169,106,0.22); }
+        .tag-coral  { background: rgba(204,90,70,0.1);   color: var(--coral); border: 1px solid rgba(204,90,70,0.22); }
+        .tag-teal   { background: rgba(106,191,184,0.1); color: var(--teal);  border: 1px solid rgba(106,191,184,0.22); }
+        .tag-purple { background: rgba(107,62,116,0.08); color: var(--gold);  border: 1px solid rgba(107,62,116,0.2); }
+        .tag-green  { background: rgba(74,124,89,0.08);  color: #4a7c59;      border: 1px solid rgba(74,124,89,0.2); }
 
-        .card-role {
-            font-size: 0.7rem;
-            letter-spacing: 0.08em;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
+        .card-role { font-size: 0.7rem; letter-spacing: 0.08em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 1rem; font-weight: 400; }
         .card-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.4rem; }
         .card-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .chip {
@@ -430,54 +377,31 @@
             font-size: 0.72rem;
             color: var(--gold);
         }
+        .card-hint {
+            margin-top: 1.25rem;
+            font-size: 0.65rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0;
+            transition: opacity 0.25s;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .project-card:hover .card-hint { opacity: 1; }
 
         /* ─── CONTACT ─── */
         #contact { background: var(--surface); }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
         .contact-intro p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.85; margin-bottom: 2.5rem; }
         .contact-links { display: flex; flex-direction: column; gap: 1.25rem; }
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-decoration: none;
-            color: var(--text);
-            font-size: 0.92rem;
-            transition: color 0.2s;
-        }
+        .contact-link { display: flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--text); font-size: 0.92rem; transition: color 0.2s; }
         .contact-link:hover { color: var(--gold); }
-        .c-icon {
-            width: 38px;
-            height: 38px;
-            border: 1px solid var(--border);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            flex-shrink: 0;
-            transition: all 0.25s;
-        }
+        .c-icon { width: 38px; height: 38px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; transition: all 0.25s; }
         .contact-link:hover .c-icon { border-color: var(--gold); color: var(--gold); }
-
-        .contact-card {
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 2.5rem;
-            background: #ede9e0;
-        }
-        .contact-card-title {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--text);
-            margin-bottom: 1rem;
-        }
+        .contact-card { border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; background: #ede9e0; }
+        .contact-card-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; color: var(--text); margin-bottom: 1rem; }
         .contact-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.8; margin-bottom: 1.75rem; }
         .available-badge {
             display: inline-flex;
@@ -492,40 +416,17 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
         }
-        .pulse-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #4a7c59;
-            animation: pulse 2s infinite;
-        }
+        .pulse-dot { width: 6px; height: 6px; border-radius: 50%; background: #4a7c59; animation: pulse 2s infinite; }
 
         /* ─── FOOTER ─── */
-        footer {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 2rem 5vw;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--border);
-        }
+        footer { max-width: 1180px; margin: 0 auto; padding: 2rem 5vw; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); }
         footer p { font-size: 0.72rem; color: var(--text-dim); letter-spacing: 0.08em; }
 
         /* ─── ANIMATIONS ─── */
-        @keyframes fadeUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(28px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
         .d1 { transition-delay: 0.1s; }
         .d2 { transition-delay: 0.2s; }
@@ -545,6 +446,142 @@
             .hero-stats { gap: 2rem; }
             footer { flex-direction: column; gap: 0.5rem; text-align: center; }
             .ring-1, .ring-2, .ring-3 { display: none; }
+        }
+
+        /* ═══════════════════════════════
+           PROJECT MODAL
+        ═══════════════════════════════ */
+        .modal-overlay {
+            position: fixed; inset: 0;
+            background: rgba(30, 22, 18, 0.72);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 500;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.38s;
+        }
+        .modal-overlay.open { opacity: 1; pointer-events: auto; }
+
+        .modal-wrap {
+            position: fixed; inset: 0;
+            z-index: 501;
+            overflow-y: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 2.5rem 1.25rem 4rem;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(40px) scale(0.98);
+            transition: opacity 0.38s cubic-bezier(0.2,0,0,1), transform 0.38s cubic-bezier(0.2,0,0,1);
+        }
+        .modal-wrap.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+
+        .modal-card {
+            background: #ede9e0;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            width: 100%;
+            max-width: 860px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 32px 80px rgba(30,22,18,0.28);
+        }
+        .modal-accent { height: 3px; background: linear-gradient(90deg, var(--gold), var(--coral), var(--teal)); }
+
+        .modal-close {
+            position: absolute;
+            top: 1.1rem; right: 1.1rem;
+            background: rgba(232,226,212,0.95);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 36px; height: 36px;
+            cursor: pointer; font-size: 13px;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text-muted);
+            transition: all 0.2s;
+            z-index: 2;
+        }
+        .modal-close:hover { background: white; color: var(--text); border-color: var(--border-hover); }
+
+        .modal-gallery {
+            display: flex;
+            gap: 0.8rem;
+            padding: 1.75rem 2rem 0;
+            overflow-x: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+        }
+        .modal-gallery::-webkit-scrollbar { height: 4px; }
+        .modal-gallery::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        .modal-gallery-item {
+            flex-shrink: 0;
+            width: 280px; height: 175px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            background: var(--surface-2);
+        }
+        .modal-gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .modal-gallery-placeholder {
+            flex-shrink: 0;
+            width: 280px; height: 175px;
+            border-radius: 8px;
+            border: 1px dashed var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: rgba(232,226,212,0.5);
+            color: var(--text-dim);
+            font-size: 0.7rem;
+            letter-spacing: 0.06em;
+            text-align: center;
+            padding: 1rem;
+        }
+        .modal-gallery-placeholder span { font-size: 1.4rem; opacity: 0.35; }
+
+        .modal-body { padding: 1.75rem 2rem 2.5rem; }
+        .modal-company {
+            font-family: var(--font-serif);
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+            font-weight: 300;
+            color: var(--text);
+            line-height: 1.1;
+            margin-bottom: 0.35rem;
+        }
+        .modal-role { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; margin-bottom: 1.4rem; }
+        .modal-divider { height: 1px; background: var(--border); margin-bottom: 1.4rem; }
+        .modal-desc { font-size: 0.93rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 1.6rem; }
+        .modal-hl-label { font-size: 0.63rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 400; margin-bottom: 0.8rem; }
+        .modal-highlights { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 1.75rem; }
+        .modal-highlights li { display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.88rem; color: var(--text); line-height: 1.6; }
+        .modal-highlights li::before { content: '→'; color: var(--gold); flex-shrink: 0; margin-top: 0.05em; font-size: 0.82rem; }
+        .modal-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.6rem; }
+        .modal-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(107,62,116,0.3);
+            padding-bottom: 0.15rem;
+            transition: border-color 0.2s, opacity 0.2s;
+        }
+        .modal-link:hover { border-color: var(--gold); opacity: 0.8; }
+
+        @media (max-width: 600px) {
+            .modal-wrap { padding: 1rem 0.75rem 3rem; }
+            .modal-gallery { padding: 1.25rem 1.25rem 0; }
+            .modal-body { padding: 1.25rem 1.25rem 2rem; }
+            .modal-gallery-item, .modal-gallery-placeholder { width: 220px; height: 138px; }
         }
     </style>
 </head>
@@ -609,7 +646,7 @@
             <span class="stat-label">Years Experience</span>
         </div>
         <div class="stat">
-            <span class="stat-value">6</span>
+            <span class="stat-value">9</span>
             <span class="stat-label">Projects</span>
         </div>
         <div class="stat">
@@ -716,104 +753,163 @@
         <div class="section-eyebrow reveal">
             <span class="section-eyebrow-text">Selected Work</span>
         </div>
-        <h2 class="section-title reveal">Six projects.<br><em>Real impact.</em></h2>
+        <h2 class="section-title reveal">Nine projects.<br><em>Real impact.</em></h2>
 
         <div class="projects-grid">
 
             <!-- CoBlack -->
-            <div class="project-card reveal">
+            <div class="project-card reveal" data-project="coblack">
                 <div class="card-header">
                     <div class="card-company">CoBlack — Acadium</div>
                     <span class="tag tag-teal">Growth</span>
                 </div>
                 <div class="card-role">Product Strategy &amp; Content Growth Apprentice</div>
-                <p class="card-desc">Partnered with CoBlack's founding team to develop content growth frameworks that scaled organic reach across key platforms. Executed A/B testing on content formats to identify top-performing narrative strategies and inform campaign direction. Contributed to product roadmap discussions by translating user feedback into actionable feature and positioning insights.</p>
+                <p class="card-desc">Partnered with CoBlack's founding team to develop content growth frameworks that scaled organic reach across key platforms. Executed A/B testing on content formats to identify top-performing narrative strategies.</p>
                 <div class="card-chips">
                     <span class="chip">Content Growth</span>
                     <span class="chip">A/B Testing</span>
                     <span class="chip">Roadmap Input</span>
                     <span class="chip">Organic Reach</span>
                 </div>
+                <div class="card-hint">View case study →</div>
             </div>
 
             <!-- Xire -->
-            <div class="project-card reveal d1">
+            <div class="project-card reveal d1" data-project="xire">
                 <div class="card-header">
                     <div class="card-company">Xire</div>
                     <span class="tag tag-coral">Marketing &amp; Product</span>
                 </div>
                 <div class="card-role">Marketing &amp; Product Strategy Intern</div>
-                <p class="card-desc">Led integrated marketing strategy for Xire's product launch, coordinating across brand, content, and growth channels. Defined ICP and buyer personas to sharpen messaging and drive qualified pipeline. Managed campaign performance tracking and delivered bi-weekly optimization reports, enabling the team to iterate quickly and maximize early traction.</p>
+                <p class="card-desc">Led integrated marketing strategy for Xire's product launch, coordinating across brand, content, and growth channels. Defined ICP and buyer personas to sharpen messaging and drive qualified pipeline.</p>
                 <div class="card-chips">
                     <span class="chip">Product Launch</span>
                     <span class="chip">ICP Definition</span>
                     <span class="chip">Campaign Optimization</span>
                     <span class="chip">Cross-functional</span>
                 </div>
+                <div class="card-hint">View case study →</div>
             </div>
 
             <!-- BeReal -->
-            <div class="project-card reveal">
+            <div class="project-card reveal" data-project="bereal">
                 <div class="card-header">
                     <div class="card-company">BeReal — Extern</div>
                     <span class="tag tag-teal">Product Strategy</span>
                 </div>
                 <div class="card-role">Product Management / Product &amp; Market Strategy</div>
-                <p class="card-desc">Developed product positioning and go-to-market strategy for BeReal's user retention and monetization initiatives. Analyzed behavioral data to identify activation drop-off points and proposed feature enhancements targeting DAU/MAU improvement. Built a cross-platform competitive matrix to surface differentiation opportunities in an increasingly crowded social landscape.</p>
+                <p class="card-desc">Developed product positioning and go-to-market strategy for BeReal's user retention and monetization initiatives. Analyzed behavioral data to identify activation drop-off points targeting DAU/MAU improvement.</p>
                 <div class="card-chips">
                     <span class="chip">GTM Strategy</span>
                     <span class="chip">User Retention</span>
                     <span class="chip">Competitive Matrix</span>
                     <span class="chip">Feature Roadmap</span>
                 </div>
+                <div class="card-hint">View case study →</div>
             </div>
 
             <!-- TikTok Extern -->
-            <div class="project-card reveal d1">
+            <div class="project-card reveal d1" data-project="tiktok">
                 <div class="card-header">
                     <div class="card-company">TikTok — Extern</div>
                     <span class="tag tag-gold">Content Strategy</span>
                 </div>
                 <div class="card-role">Social Media + Content Strategy Extern · All Basics Uniforms</div>
-                <p class="card-desc">Designed a social-first content strategy for All Basics Uniforms, a school uniform brand seeking to drive brand awareness, trust, and community. Delivered a complete TikTok and Instagram content system — including UGC frameworks, experimentation roadmap, metrics tracking, and ready-to-publish example assets — all tied to clear business goals.</p>
+                <p class="card-desc">Designed a social-first content strategy for All Basics Uniforms, delivering a complete TikTok and Instagram content system with UGC frameworks, experimentation roadmap, and metrics tracking.</p>
                 <div class="card-chips">
                     <span class="chip">TikTok + Instagram System</span>
                     <span class="chip">UGC Strategy</span>
                     <span class="chip">Metrics Framework</span>
                     <span class="chip">Content Experiments</span>
                 </div>
+                <div class="card-hint">View case study →</div>
             </div>
 
             <!-- Tonymoly -->
-            <div class="project-card reveal">
+            <div class="project-card reveal" data-project="tonymoly">
                 <div class="card-header">
                     <div class="card-company">Tonymoly Nepal</div>
                     <span class="tag tag-gold">Social Media</span>
                 </div>
                 <div class="card-role">Freelance Content Strategist &amp; Social Media Marketing Manager Intern</div>
-                <p class="card-desc">Led end-to-end content strategy for Tonymoly Nepal, producing video reels, product showcases, and photography-driven campaigns that strengthened brand identity and drove meaningful engagement with the skincare community. Combined analytics with creative direction to continuously optimize performance and grow the brand's digital footprint.</p>
+                <p class="card-desc">Led end-to-end content strategy producing video reels, product showcases, and photography-driven campaigns — driving measurable engagement growth and expanding the brand's digital footprint.</p>
                 <div class="card-chips">
                     <span class="chip">+25% Brand Engagement</span>
                     <span class="chip">+15% Online Sales</span>
                     <span class="chip">+40% Post Engagement</span>
                     <span class="chip">+33% Followers in 1 Month</span>
                 </div>
+                <div class="card-hint">View case study →</div>
             </div>
 
             <!-- Beats by Dre -->
-            <div class="project-card reveal d1">
+            <div class="project-card reveal d1" data-project="beats">
                 <div class="card-header">
                     <div class="card-company">Beats by Dre — Extern</div>
                     <span class="tag tag-coral">Brand Research</span>
                 </div>
                 <div class="card-role">Brand + Market Research Extern</div>
-                <p class="card-desc">Conducted deep competitive landscape analysis and consumer sentiment research to inform Beats by Dre's Gen Z audience strategy. Delivered brand positioning recommendations identifying whitespace in the premium wireless audio market, alongside an influencer tier map and cultural touchpoint analysis to guide a more authentic brand voice.</p>
+                <p class="card-desc">Conducted competitive landscape analysis and consumer sentiment research to inform Beats by Dre's Gen Z audience strategy, delivering positioning recommendations and an influencer tier map.</p>
                 <div class="card-chips">
                     <span class="chip">Competitive Analysis</span>
                     <span class="chip">Gen Z Positioning</span>
                     <span class="chip">Influencer Mapping</span>
                     <span class="chip">Brand Recommendations</span>
                 </div>
+                <div class="card-hint">View case study →</div>
+            </div>
+
+            <!-- A Little Bookshelf -->
+            <div class="project-card reveal" data-project="bookshelf">
+                <div class="card-header">
+                    <div class="card-company">A Little Bookshelf</div>
+                    <span class="tag tag-purple">Personal Project</span>
+                </div>
+                <div class="card-role">Designer &amp; Developer</div>
+                <p class="card-desc">Built a personal library web app featuring up to 1,000 real books from the Open Library. Browse by genre, search by title or author, and track what you want to read, are reading, or have finished.</p>
+                <div class="card-chips">
+                    <span class="chip">Web Scraping</span>
+                    <span class="chip">Open Library API</span>
+                    <span class="chip">Vanilla JS</span>
+                    <span class="chip">UI/UX Design</span>
+                    <span class="chip">localStorage</span>
+                </div>
+                <div class="card-hint">View project →</div>
+            </div>
+
+            <!-- Senior Capstone -->
+            <div class="project-card reveal d1" data-project="capstone">
+                <div class="card-header">
+                    <div class="card-company">Senior Capstone Research</div>
+                    <span class="tag tag-green">Academic</span>
+                </div>
+                <div class="card-role">Quantitative Economics Research · Earlham College</div>
+                <p class="card-desc">Independently scoped and executed a quantitative economics research project using R and Excel — managing the full project lifecycle from hypothesis to presentation, delivering findings to a faculty research panel on deadline.</p>
+                <div class="card-chips">
+                    <span class="chip">R</span>
+                    <span class="chip">Excel</span>
+                    <span class="chip">Quantitative Research</span>
+                    <span class="chip">Data Analysis</span>
+                    <span class="chip">Research Writing</span>
+                </div>
+                <div class="card-hint">View project →</div>
+            </div>
+
+            <!-- X-Culture -->
+            <div class="project-card reveal" data-project="xculture">
+                <div class="card-header">
+                    <div class="card-company">X-Culture · Skiliify</div>
+                    <span class="tag tag-coral">Global Consulting</span>
+                </div>
+                <div class="card-role">International Business Consulting · Top 6% Globally</div>
+                <p class="card-desc">Collaborated with a virtual international team to deliver a full market entry plan for Skiliify — including SWOT analysis, competitive benchmarking, distribution channels, pricing strategy, and branding adaptation across time zones.</p>
+                <div class="card-chips">
+                    <span class="chip">Top 6% Globally (94.1%ile)</span>
+                    <span class="chip">Market Entry Strategy</span>
+                    <span class="chip">SWOT Analysis</span>
+                    <span class="chip">Global Team</span>
+                </div>
+                <div class="card-hint">View report →</div>
             </div>
 
         </div>
@@ -864,6 +960,27 @@
     <p>California, USA · diprekshya@gmail.com</p>
 </footer>
 
+<!-- PROJECT MODAL -->
+<div class="modal-overlay" id="modalOverlay"></div>
+<div class="modal-wrap" id="modalWrap" role="dialog" aria-modal="true">
+    <div class="modal-card" id="modalCard">
+        <div class="modal-accent"></div>
+        <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+        <div class="modal-gallery" id="modalGallery"></div>
+        <div class="modal-body">
+            <div id="modalTag"></div>
+            <div class="modal-company" id="modalCompany"></div>
+            <div class="modal-role" id="modalRole"></div>
+            <div class="modal-divider"></div>
+            <p class="modal-desc" id="modalDesc"></p>
+            <div class="modal-hl-label">Key Highlights</div>
+            <ul class="modal-highlights" id="modalHighlights"></ul>
+            <div class="modal-chips" id="modalChips"></div>
+            <div id="modalLinks"></div>
+        </div>
+    </div>
+</div>
+
 <script>
     // Nav scroll
     const nb = document.getElementById('navbar');
@@ -871,7 +988,7 @@
 
     // Mobile menu
     const tog = document.getElementById('navToggle');
-    const mm = document.getElementById('mobileMenu');
+    const mm  = document.getElementById('mobileMenu');
     tog.addEventListener('click', () => mm.classList.toggle('open'));
     document.querySelectorAll('.ml').forEach(l => l.addEventListener('click', () => mm.classList.remove('open')));
 
@@ -880,6 +997,205 @@
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // ═══════════════════════════════
+    // PROJECT DATA
+    // ═══════════════════════════════
+    const PROJECTS = {
+        coblack: {
+            company: 'CoBlack — Acadium',
+            tag: 'Growth', tagClass: 'tag-teal',
+            role: 'Product Strategy & Content Growth Apprentice',
+            desc: 'Partnered with CoBlack\'s founding team to develop content growth frameworks that scaled organic reach across key platforms. Executed A/B testing on content formats to identify top-performing narrative strategies and inform campaign direction. Contributed to product roadmap discussions by translating user feedback into actionable feature and positioning insights.',
+            highlights: [
+                'Developed content growth frameworks to scale organic platform reach',
+                'Ran A/B tests across content formats to surface top-performing strategies',
+                'Translated user feedback into product roadmap and positioning insights',
+                'Coordinated directly with founders on editorial calendar and campaign direction',
+            ],
+            chips: ['Content Growth', 'A/B Testing', 'Roadmap Input', 'Organic Reach', 'Editorial Strategy'],
+            images: [], links: [],
+        },
+        xire: {
+            company: 'Xire',
+            tag: 'Marketing & Product', tagClass: 'tag-coral',
+            role: 'Marketing & Product Strategy Intern',
+            desc: 'Led integrated marketing strategy for Xire\'s product launch, coordinating across brand, content, and growth channels. Defined ICP and buyer personas to sharpen messaging and drive qualified pipeline. Managed campaign performance tracking and delivered bi-weekly optimization reports, enabling the team to iterate quickly and maximize early traction.',
+            highlights: [
+                'Spearheaded end-to-end integrated marketing strategy for the product launch',
+                'Defined ICP and buyer personas to sharpen targeting and messaging',
+                'Delivered bi-weekly performance reports enabling rapid iteration cycles',
+                'Coordinated across brand, content, and growth channels simultaneously',
+            ],
+            chips: ['Product Launch', 'ICP Definition', 'Campaign Optimization', 'Cross-functional', 'Performance Tracking'],
+            images: [], links: [],
+        },
+        bereal: {
+            company: 'BeReal — Extern',
+            tag: 'Product Strategy', tagClass: 'tag-teal',
+            role: 'Product Management / Product & Market Strategy',
+            desc: 'Developed product positioning and go-to-market strategy for BeReal\'s user retention and monetization initiatives. Analyzed behavioral data to identify activation drop-off points and proposed feature enhancements targeting DAU/MAU improvement. Built a cross-platform competitive matrix to surface differentiation opportunities in an increasingly crowded social landscape.',
+            highlights: [
+                'Designed GTM strategy for user retention and monetization initiatives',
+                'Identified activation drop-off points through behavioral data analysis',
+                'Proposed feature enhancements with measurable DAU/MAU improvement targets',
+                'Built cross-platform competitive matrix to surface differentiation opportunities',
+            ],
+            chips: ['GTM Strategy', 'User Retention', 'Competitive Matrix', 'Feature Roadmap', 'Behavioral Analysis'],
+            images: [], links: [],
+        },
+        tiktok: {
+            company: 'TikTok — Extern',
+            tag: 'Content Strategy', tagClass: 'tag-gold',
+            role: 'Social Media + Content Strategy Extern · All Basics Uniforms',
+            desc: 'Designed a social-first content strategy for All Basics Uniforms, a school uniform brand seeking to drive brand awareness, trust, and community. Delivered a complete TikTok and Instagram content system — including UGC frameworks, experimentation roadmap, metrics tracking, and ready-to-publish example assets — all tied to clear business goals.',
+            highlights: [
+                'Designed full TikTok and Instagram content system for brand awareness launch',
+                'Built UGC frameworks to drive authentic community-generated content',
+                'Created content experimentation roadmap with hypothesis-driven structure',
+                'Delivered ready-to-publish assets and a full metrics tracking framework',
+            ],
+            chips: ['TikTok + Instagram', 'UGC Strategy', 'Metrics Framework', 'Content Experiments', 'Community Building'],
+            images: [], links: [],
+        },
+        tonymoly: {
+            company: 'Tonymoly Nepal',
+            tag: 'Social Media', tagClass: 'tag-gold',
+            role: 'Freelance Content Strategist & Social Media Marketing Manager Intern',
+            desc: 'Led end-to-end content strategy for Tonymoly Nepal, producing video reels, product showcases, and photography-driven campaigns that strengthened brand identity and drove meaningful engagement with the skincare community. Combined analytics with creative direction to continuously optimize performance and grow the brand\'s digital footprint.',
+            highlights: [
+                '+25% increase in overall brand engagement',
+                '+15% growth in online sales attributed to content campaigns',
+                '+40% boost in per-post engagement through creative format testing',
+                '+33% follower growth achieved in a single month',
+            ],
+            chips: ['Content Strategy', 'Video Reels', 'Product Photography', 'Analytics', 'Brand Engagement'],
+            images: [], links: [],
+        },
+        beats: {
+            company: 'Beats by Dre — Extern',
+            tag: 'Brand Research', tagClass: 'tag-coral',
+            role: 'Brand + Market Research Extern',
+            desc: 'Conducted deep competitive landscape analysis and consumer sentiment research to inform Beats by Dre\'s Gen Z audience strategy. Delivered brand positioning recommendations identifying whitespace in the premium wireless audio market, alongside an influencer tier map and cultural touchpoint analysis to guide a more authentic brand voice.',
+            highlights: [
+                'Mapped the competitive landscape across the premium wireless audio market',
+                'Identified Gen Z whitespace and positioning opportunities for the Beats brand',
+                'Delivered an influencer tier map spanning micro to macro categories',
+                'Conducted cultural touchpoint analysis to inform a more authentic brand voice',
+            ],
+            chips: ['Competitive Analysis', 'Gen Z Positioning', 'Influencer Mapping', 'Brand Recommendations', 'Consumer Sentiment'],
+            images: [], links: [],
+        },
+        bookshelf: {
+            company: 'A Little Bookshelf',
+            tag: 'Personal Project', tagClass: 'tag-purple',
+            role: 'Designer & Developer',
+            desc: 'Built a personal library web app featuring up to 1,000 real books sourced via web scraping from the Open Library. Users can browse a curated collection by genre, search by title or author, and manage a personal reading list with three tracking states — Want to Read, Currently Reading, and Done Reading — all persisted in localStorage so progress is never lost.',
+            highlights: [
+                'Scraped and curated a library of up to 1,000 real books from the Open Library',
+                'Built genre filtering, full-text search, and multi-field sort from scratch',
+                'Designed a personal reading list system with three distinct tracking states',
+                'All data persists in localStorage across sessions — no backend required',
+                'Fully responsive, single-file design with smooth scroll animations',
+            ],
+            chips: ['Web Scraping', 'Open Library API', 'Vanilla JS', 'UI/UX Design', 'localStorage'],
+            images: [],
+            links: [{ label: 'Visit project ↗', url: 'https://diprekshya.github.io/LittleBookshelf/' }],
+        },
+        capstone: {
+            company: 'Senior Capstone Research',
+            tag: 'Academic', tagClass: 'tag-green',
+            role: 'Quantitative Economics Research · Earlham College',
+            desc: 'Independently scoped and executed a quantitative economics research project using R and Excel — managing the full project lifecycle from hypothesis to final presentation. Maintained organized documentation throughout, and delivered polished written findings and a formal research presentation to a faculty panel, on deadline.',
+            highlights: [
+                'Independently scoped the full research question, methodology, and timeline',
+                'Executed quantitative analysis using R and Excel across the data pipeline',
+                'Maintained rigorous documentation and version control throughout the project',
+                'Delivered a polished written research paper to a faculty review panel',
+                'Presented findings formally in a structured academic presentation format',
+            ],
+            chips: ['R', 'Excel', 'Quantitative Research', 'Data Analysis', 'Research Writing', 'Academic Presentation'],
+            images: [], links: [],
+        },
+        xculture: {
+            company: 'X-Culture · Skiliify',
+            tag: 'Global Consulting', tagClass: 'tag-coral',
+            role: 'International Business Consulting · Top 6% Globally (94.1 percentile)',
+            desc: 'Worked in a virtual team of students from different countries to conduct market research, SWOT analysis, and competitive benchmarking for Skiliify. Identified high-potential international markets and developed a full market entry plan — including distribution channels, pricing strategy, branding adaptation, and risk assessment. Co-authored a final consulting report with actionable recommendations aligned to the client\'s business goals.',
+            highlights: [
+                'Achieved Top 6% globally (94.1 percentile) with a perfect evaluation score',
+                'Received positive feedback from X-Culture faculty mentors for strategic depth',
+                'Identified high-potential international markets through competitive benchmarking',
+                'Developed a full market entry plan covering distribution, pricing, and branding',
+                'Managed cross-timezone collaboration using Google Suite, Trello, and Zoom',
+            ],
+            chips: ['Market Entry Strategy', 'SWOT Analysis', 'Competitive Benchmarking', 'Global Teamwork', 'Business Consulting', 'Top 6% Globally'],
+            images: [],
+            links: [{ label: 'View final report ↗', url: 'https://earlham.app.box.com/s/zgn22gj6gnfg22ejuo5h5je3udrgfpj0' }],
+        },
+    };
+
+    // ═══════════════════════════════
+    // MODAL LOGIC
+    // ═══════════════════════════════
+    const overlay  = document.getElementById('modalOverlay');
+    const wrap     = document.getElementById('modalWrap');
+    const closeBtn = document.getElementById('modalClose');
+
+    function openModal(id) {
+        const p = PROJECTS[id];
+        if (!p) return;
+
+        document.getElementById('modalTag').innerHTML =
+            `<span class="tag ${p.tagClass}" style="display:inline-block;margin-bottom:0.75rem">${p.tag}</span>`;
+        document.getElementById('modalCompany').textContent  = p.company;
+        document.getElementById('modalRole').textContent     = p.role;
+        document.getElementById('modalDesc').textContent     = p.desc;
+
+        document.getElementById('modalHighlights').innerHTML =
+            p.highlights.map(h => `<li>${h}</li>`).join('');
+
+        document.getElementById('modalChips').innerHTML =
+            p.chips.map(c => `<span class="chip">${c}</span>`).join('');
+
+        document.getElementById('modalLinks').innerHTML =
+            (p.links || []).map(l =>
+                `<a class="modal-link" href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`
+            ).join('&ensp;');
+
+        const gallery = document.getElementById('modalGallery');
+        if (p.images && p.images.length) {
+            gallery.innerHTML = p.images.map(src =>
+                `<div class="modal-gallery-item"><img src="${src}" alt="" loading="lazy" /></div>`
+            ).join('');
+        } else {
+            gallery.innerHTML = Array(3).fill(0).map(() =>
+                `<div class="modal-gallery-placeholder"><span>🖼</span>Add images here</div>`
+            ).join('');
+        }
+
+        document.body.style.overflow = 'hidden';
+        overlay.classList.add('open');
+        wrap.classList.add('open');
+        wrap.scrollTop = 0;
+    }
+
+    function closeModal() {
+        overlay.classList.remove('open');
+        wrap.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.project-card[data-project]').forEach(card => {
+        card.addEventListener('click', () => openModal(card.dataset.project));
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+    wrap.addEventListener('click', e => { if (e.target === wrap) closeModal(); });
+    window.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && wrap.classList.contains('open')) closeModal();
+    });
 </script>
 </body>
 </html>
