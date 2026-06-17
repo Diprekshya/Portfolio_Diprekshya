@@ -10,8 +10,8 @@ Personal portfolio site for Diprekshya Maharjan, a marketing strategist and anal
 
 A single-page site covering nine projects across brand strategy, product marketing, social media, and data analysis — including work with Beats by Dre, BeReal, TikTok, Tonymoly Nepal, and more. Each project card opens a full-screen detail view with descriptions, highlights, and links to deliverables.
 
-Built with vanilla HTML, CSS, and JavaScript. No frameworks, no dependencies.
-
 ---
 
 diprekshya@gmail.com · [LinkedIn](https://www.linkedin.com/in/diprekshya-maharjan/)
+
+*Made using [Claude](https://claude.ai)*
