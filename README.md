@@ -1,6 +1,6 @@
 # Diprekshya Maharjan — Portfolio
 
-Personal portfolio site for Diprekshya Maharjan, a marketing strategist and analyst based in California.
+Personal portfolio site for Diprekshya Maharjan, a curious business problem solver, marketing strategist, and analyst based in California.
 
 **Live site →** [diprekshya.github.io/Portfolio_Diprekshya](https://diprekshya.github.io/Portfolio_Diprekshya/)
 
