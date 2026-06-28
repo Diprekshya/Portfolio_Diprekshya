@@ -16,9 +16,27 @@
       --accent: #5A8C65;
       --muted: #7D8A7A;
       --line:  #D4D8D0;
+      --about-bg: #1B2019;
     }
 
     html { scroll-behavior: smooth; }
+
+    html.dark {
+      --cream: #0F1411;
+      --dark:  #E5EDE5;
+      --accent: #6BA876;
+      --muted: rgba(229,237,229,0.5);
+      --line:  rgba(229,237,229,0.1);
+      --about-bg: #141A14;
+    }
+    html.dark nav         { background: rgba(15,20,17,0.9); }
+    html.dark .about-section { color: #E5EDE5; }
+    html.dark .about-label    { color: #E5EDE5; }
+    html.dark .about-text     { color: rgba(229,237,229,0.68); }
+    html.dark .about-sub-value { color: rgba(229,237,229,0.62); }
+    html.dark .stat-n         { color: #E5EDE5; }
+    html.dark .stat-l         { color: rgba(229,237,229,0.38); }
+    html.dark .tool-tag       { color: rgba(229,237,229,0.52); border-color: rgba(229,237,229,0.12); }
 
     body {
       background: var(--cream);
@@ -27,6 +45,7 @@
       font-weight: 300;
       overflow-x: hidden;
       cursor: none;
+      transition: background 0.4s, color 0.4s;
     }
     a, button, [onclick], label { cursor: none; }
 
@@ -389,7 +408,7 @@
 
     /* ── ABOUT ── */
     .about-section {
-      background: var(--dark);
+      background: var(--about-bg);
       color: var(--cream);
       padding: 7rem 3rem;
     }
@@ -570,6 +589,53 @@
       letter-spacing: 0.06em;
     }
 
+    /* ── THEME TOGGLE ── */
+    #theme-toggle {
+      background: none;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 1rem;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.3s, color 0.3s;
+      padding: 0;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    #theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── TOOLS STRIP ── */
+    .tools-row { margin-top: 2rem; }
+    .tools-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem; }
+    .tool-tag {
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(243,241,235,0.52);
+      border: 1px solid rgba(243,241,235,0.12);
+      padding: 0.25rem 0.7rem;
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .tool-tag:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── SUBSTACK POSTS ── */
+    .substack-posts { margin-top: 0.9rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .substack-post {
+      font-size: 0.72rem;
+      color: var(--accent);
+      text-decoration: none;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .substack-post::before { content: '→'; font-size: 0.65rem; }
+    .substack-post:hover { opacity: 1; }
+
     /* ── FOOTER ── */
     footer {
       padding: 1.8rem 3rem;
@@ -664,6 +730,7 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="theme-toggle" title="Toggle dark mode">◐</button>
   </nav>
 
   <!-- HERO -->
@@ -817,7 +884,7 @@
         <div class="detail-inner">
           <p class="detail-skills">Competitive Analysis · Gen Z Positioning · Influencer Mapping · Brand Recommendations</p>
           <p class="proj-desc">Delivered positioning recommendations and an influencer tier map grounded in primary and secondary consumer research.</p>
-          <a href="https://canva.link/diprekshyabeatsbydre" target="_blank" class="detail-link">View case study →</a>
+          <a href="https://diprekshyabeatsbydre.my.canva.site/" target="_blank" class="detail-link">View case study →</a>
         </div>
       </div>
     </div>
@@ -939,6 +1006,20 @@
           </div>
         </div>
 
+        <div class="tools-row">
+          <p class="about-sub-label">Tools</p>
+          <div class="tools-list">
+            <span class="tool-tag">Figma</span>
+            <span class="tool-tag">R</span>
+            <span class="tool-tag">Excel</span>
+            <span class="tool-tag">Canva</span>
+            <span class="tool-tag">SQL</span>
+            <span class="tool-tag">HTML / CSS / JS</span>
+            <span class="tool-tag">Notion</span>
+            <span class="tool-tag">Claude Code</span>
+          </div>
+        </div>
+
         <span class="open-badge">Available for Hire · 2026</span>
       </div>
 
@@ -1034,6 +1115,10 @@
       <div class="now-item">
         <p class="now-label">Writing</p>
         <p class="now-text">Irregular essays on the things I can't stop thinking and feeling about — published on Substack.</p>
+        <div class="substack-posts">
+          <a href="https://substack.com/@halfwrittenhours" target="_blank" class="substack-post">On being between things</a>
+          <a href="https://substack.com/@halfwrittenhours" target="_blank" class="substack-post">What the data doesn't say</a>
+        </div>
       </div>
       <div class="now-item">
         <p class="now-label">Open to</p>
@@ -1099,6 +1184,38 @@
         heroDecoEl.style.transform = `translateY(calc(-50% + ${window.scrollY * 0.25}px))`;
       }, { passive: true });
     }
+
+    // Theme toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        themeBtn.textContent = document.documentElement.classList.contains('dark') ? '○' : '◐';
+      });
+    }
+
+    // Easter egg — click right side of hero to burst ✦ stars from the D
+    document.querySelector('.hero').addEventListener('click', e => {
+      if (e.clientX / window.innerWidth < 0.55) return;
+      const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
+      for (let i = 0; i < 10; i++) {
+        const star = document.createElement('span');
+        star.textContent = '✦';
+        const size = 10 + Math.random() * 14;
+        star.style.cssText = `position:fixed;left:${e.clientX}px;top:${e.clientY}px;color:${accent};font-size:${size}px;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);`;
+        document.body.appendChild(star);
+        const angle = (i / 10) * Math.PI * 2;
+        const dist = 60 + Math.random() * 100;
+        const dx = Math.cos(angle) * dist;
+        const dy = Math.sin(angle) * dist;
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          star.style.transition = 'transform 0.9s cubic-bezier(0.2,0,0.2,1), opacity 0.9s ease-out';
+          star.style.transform = `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px)) rotate(${Math.random()*180}deg) scale(0.1)`;
+          star.style.opacity = '0';
+        }));
+        setTimeout(() => star.remove(), 1000);
+      }
+    });
 
     // Animated stat counters
     function countUp(el) {
